@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "underscore.deferred": "~0.2.0",
-    "pkgcloud": "~0.6.7-1"
+    "pkgcloud": ">= 0.8.0"
   },
   "devDependencies": {
     "grunt": "~0.4.0"
