@@ -37,6 +37,10 @@ module.exports = function(grunt) {
       clientConfig.authUrl = config.authUrl;
     }
 
+    if (config.hasOwnProperty('region')) {
+      clientConfig.region = config.region;
+    }
+
     client = cf.storage.createClient(clientConfig);
 
     var cfActivity = [];

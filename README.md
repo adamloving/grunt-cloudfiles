@@ -52,7 +52,24 @@ cloudfiles: {
 }
 ```
 
+An optional 'region' parameter can be specified (and may be necessary) as well.
+
+```javascript
+cloudfiles: {
+  prod: {
+    ...
+    region: 'ORD',
+    ...
+  }
+}
+```
+
+
 ## Changelog
+
+### 0.0.5
+
+* Added support for region parameter
 
 ### 0.0.4
 
