@@ -51,6 +51,10 @@ module.exports = function(grunt) {
         grunt.log.subhead('Uploading into ' + upload.container);
         var files = grunt.file.expand(upload.src);
 
+        if (files.length == 0) {
+          grunt.log.error('No files matching pattern ' + upload.src);
+        }
+
         if (upload.dest === undefined) { upload.dest = '' }
 
         files.forEach(function(file) {
@@ -106,7 +110,7 @@ module.exports = function(grunt) {
   }
 
   function cf_addFile(container, src, dest) {
-    grunt.log.debug('Starting an upload');
+    grunt.log.debug('Starting an upload', src, container, dest);
     var dfd = _.Deferred();
 
     client.upload({
